@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
 
+  before_validation :username_downcase
+
   def encrypt_password
     if self.password.present?
 
@@ -46,4 +48,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  def username_downcase
+    username = self.username.downcase!
+  end
 end
