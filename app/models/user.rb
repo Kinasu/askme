@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :questions
 
   validates :email, presence: true, uniqueness: true, email_format: { message: "Не похоже на email" }
-  validates :username, presence: true, uniqueness: true, format: { with: /\A@\w{1,40}\z/}
+  validates :username, presence: true, uniqueness: true, format: { with: /\w{1,40}\z/}
   #length: { maximum: 40 }username
 
   attr_accessor :password
@@ -49,6 +49,6 @@ class User < ActiveRecord::Base
   end
 
   def username_downcase
-    username = self.username.downcase!
+    self.username = username.downcase
   end
 end
