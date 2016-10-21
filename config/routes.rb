@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :users
+  root 'users#index'
 
+  resources :users
+  resources :questions
 
   get 'show' => 'users#show'
 
