@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
@@ -57,5 +58,15 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation,
                                  :name, :username, :avatar_url)
+  end
+
+  def destroy
+    if @user == current_user
+      @user.user_params = nil
+      @user.destroy
+      redirect_to root_url, notice: 'Вы удалились, очень жаль! :('
+    else
+      redirect_to root_url, alert: 'Вы не залогинились'
+    end
   end
 end

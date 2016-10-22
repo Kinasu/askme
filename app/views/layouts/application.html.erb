@@ -21,6 +21,7 @@
           <% if current_user %>
             <%= link_to "@#{current_user.username}", user_path(current_user) %>
             <%= link_to 'Выйти', log_out_path %>
+            <%= link_to 'Удалить профиль', delete_path %>
           <% else %>
             <%=  link_to 'Зарегистрироваться', sing_up_path, class: 'button button-light button-small'%>
             <%=  link_to 'Войти', log_in_path, class: 'button button-light button-small'%>

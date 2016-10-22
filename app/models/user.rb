@@ -51,4 +51,7 @@ class User < ActiveRecord::Base
   def username_downcase
     self.username = username.downcase
   end
+
+
+
 end
