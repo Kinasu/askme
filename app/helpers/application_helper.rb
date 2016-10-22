@@ -8,10 +8,11 @@ module ApplicationHelper
   end
 
   def question_count(user, krokodil, krokodila, krokodilov)
+
     @number = @questions.length
 
     if (@number == nil || !@number.is_a?(Numeric))
-      number = 0 # если первый параметр пустой или не число, то продолжаем как будто он нулевой
+      @number = 0 # если первый параметр пустой или не число, то продолжаем как будто он нулевой
     end
 
     # условия для исключений
