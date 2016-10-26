@@ -15,7 +15,7 @@
  *
  * Подключаем reset.css
  *= require reset
- *
+ * 
  * Подключаем общие стили для всех страниц
  *= require text
  *= require grid
