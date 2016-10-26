@@ -13,6 +13,7 @@ gem 'rails_12factor'
 
 gem 'uglifier'
 
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
