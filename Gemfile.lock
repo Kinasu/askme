@@ -125,7 +125,7 @@ DEPENDENCIES
   byebug
   jquery-rails
   pg
-  rails (~> 4.2.6)
+  rails (~> 4.2.7)
   rails_12factor
   sqlite3
   uglifier
